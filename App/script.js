@@ -71,7 +71,7 @@ function   activateEditListen(){
     const inputs = document.querySelectorAll(".input-controller textarea")
     editBtn.forEach((eb, i) =>{
         eb.addEventListener("click", () => {
-            updateController[i].computedStyleMap.display = "block"
+            updateController[i].style.display = "block"
             inputs[i].disabled = false
         })
     })
@@ -81,8 +81,8 @@ function   activateSaveListen(){
     const inputs = document.querySelectorAll(".input-controller textarea")
 
     saveBtn.forEach((sb, i) => {
-        saveBtn.addEventListener("click", () =>{
-            updateitem(inputs[i].value, i)
+        sb.addEventListener("click", () =>{
+            updateItem(inputs[i].value, i)
         })
     })
 
@@ -92,9 +92,16 @@ function  activateCancelListen(){
     const updateController = document.querySelectorAll(".update-controller")
     const inputs = document.querySelectorAll(".input-controller textarea")
 
-    saveBtn.forEach((sb, i) => {
-        saveBtn.addEventListener("click", () =>{
-            updateitem(inputs[i].value, i)
+    cancelBtn.forEach((cb, i) => {
+        cb.addEventListener("click", () =>{
+            updateController[i].style.display = "none"
+            inputs[i].disabled = true
         })
     })
 }
+
+function updateItem(text, i){
+    itemsArray[i] = text
+    localStorage.setItem('items', JSON.stringify(itemsArray))
+    location.reload()
+  }
