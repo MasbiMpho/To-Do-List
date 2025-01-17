@@ -36,6 +36,10 @@ h1{
     color: var(--accent-color);
 }
 
+form{
+    position: relative;
+}
+
 .wrapper{
     width: 700px;
     max-width: 100%;
@@ -44,7 +48,8 @@ h1{
     gap: 10px;
 }
 
-#txtInput{
+
+#txtInputID{
     box-sizing: border-box;
     padding: 12px 20px;
     width: 100%;
@@ -55,12 +60,12 @@ h1{
     color: var(--text-color);
     caret-color: var(--accent-color);
 }
-
-form{
-    position: relative;
+#txtInputID:focus{
+    outline: none;
 }
 
-#btnAdd{
+
+#btnAddID{
     position: absolute;
     top: 0;
     right: 0;
@@ -74,5 +79,82 @@ form{
     font-weight: 600;
     color: var(--background);
     cursor: pointer;
+}
 
+.cTask{
+    margin-bottom: 10px;
+    padding: 0 16px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cTask .cTaskText{
+    padding: 15px;
+    padding-right: 0;
+    flex-grow: 1;
+    transition: 200ms ease;
+}
+
+.cDelete{
+    padding: 3px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cDelete svg{
+    transition: 200ms ease;
+}
+.cDelete:hover svg{
+    fill: #ff0033;
+}
+
+.cCheckbox{
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    min-height: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: 200ms ease;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+input[type="checkbox"]:checked ~ .custom-checkbox{
+    background-color: var(--accent-color);
+}
+input[type="checkbox"]:checked ~ .custom-checkbox svg{
+    fill: var(--primary-color);
+}
+input[type="checkbox"]:checked ~ .cTaskText{
+    text-decoration: line-through;
+    color: var(--secondary-color);
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+/*Responsiveness*/
+@media(max-width: 500px){
+    html{
+        font-size: 12pt;
+    }
+    #add-button{
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px;
+        height: auto;
+    }
+    h1{
+        margin-top: 50px;
+        font-size: 15vw;
+    }
 }
