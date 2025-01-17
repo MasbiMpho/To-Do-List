@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Additional Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <h1>To Do List</h1>
+    
+    <div class="wrapper">
+      <form>
+        <input id="txtInput" type="text" placeholder="Enter task" autocomplete="off">
+        <button id="btnAdd" type="button">Add</button>
+      </form>
+
+      <ul id="list">
+        <li id="tasks">
+            <input type="checkbox" id="task-0" placeholder="Initial task">
+            <label for="task-0" class="customCheckbox">
+                <i class="fa-regular fa-circle-check">asd</i>
+            </label>
+
+            <label for="task-0" class="boxText"></label>
+            <button id="btnDelete" type="button">
+                <i class="fa-solid fa-trash-can">Delete</i>
+            </button>
+        </li>
+      </ul>
+      <ul id="list1">
+        <li id="tasks1">
+            <input type="checkbox" id="task-01" placeholder="Initial task">
+            <label for="task-01" class="customCheckbox">
+                <i class="fa-regular fa-circle-check">asd</i>
+            </label>
+
+            <label for="task-01" class="boxText"></label>
+            <button id="btnDelete2" type="button">
+                <i class="fa-solid fa-trash-can">Delete</i>
+            </button>
+        </li>
+      </ul>
+
+    </div>
+    <!-- List Functionality -->
+        <script src="script.js"></script>
+</body>
+</html>
