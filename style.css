@@ -127,10 +127,10 @@ form{
     margin-top: 3px;
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox{
+input[type="checkbox"]:checked ~ .cCheckbox{
     background-color: var(--accent-color);
 }
-input[type="checkbox"]:checked ~ .custom-checkbox svg{
+input[type="checkbox"]:checked ~ .cCheckbox svg{
     fill: var(--primary-color);
 }
 input[type="checkbox"]:checked ~ .cTaskText{
