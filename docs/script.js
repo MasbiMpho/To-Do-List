@@ -58,15 +58,15 @@ async function addTask(){
 function updateTaskList(){
     List.innerHTML = "";
 
-    TaskArray.forEach((task, index) => {
-        const Item = createTaskItem(task, index);
+    TaskArray.forEach((task) => {
+        const Item = createTaskItem(task);
         List.append(Item);
     });
 }
 
 // Create a list item for each task
-function createTaskItem(task, index){
-    const taskid = "task-" + task.id;
+function createTaskItem(task){
+    const taskid = "task-" + task.id;  // Use the task's ID
     const litask = document.createElement("li");
     const TaskText = task.text;
 
@@ -133,6 +133,3 @@ async function deleteTaskItem(taskId){
 
 // Initial fetch of tasks when the page loads
 fetchTasks();
-
-
-
