@@ -24,7 +24,10 @@ function addTask(){
         saveTasks();
 
         Input.value = "";
-    }  
+    } 
+    else{
+        alert("Please enter a task");
+    } 
 }
 
 function updateTaskList(){
@@ -85,3 +88,4 @@ function getTasks(){
     const Tasks = localStorage.getItem("Tasks") || "[]";
     return JSON.parse(Tasks);
 }
+
