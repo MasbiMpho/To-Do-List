@@ -101,8 +101,10 @@ form{
 .cTask .cTaskText{
     padding: 15px;
     padding-right: 0;
+    max-width: 90%;
     flex-grow: 1;
-    transition: 200ms ease;
+    transition: 200ms ease; 
+    overflow-wrap: break-word;   
 }
 
 .cDelete{
@@ -133,6 +135,7 @@ form{
     transition: 200ms ease;
     cursor: pointer;
     margin-top: 3px;
+   
 }
 
 input[type="checkbox"]:checked ~ .cCheckbox{
