@@ -70,8 +70,8 @@ app.delete('/api/tasks/:id', (req, res) => {
   res.json({ message: 'Task deleted' });
 });
 
-// Serve static files (HTML, CSS, JS) from the 'public' folder
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files (HTML, CSS, JS) from the 'docs' folder
+app.use(express.static(path.join(__dirname, 'docs')));
 
 // Start the server
 app.listen(port, () => {
