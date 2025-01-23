@@ -27,7 +27,7 @@ body{
     align-items: center;
 
     
-    background-image: url('Assets/8.jpg');
+    background-image: url('Assets/7.jpg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat; 
@@ -106,7 +106,7 @@ form{
     right: 4px;
 
     color: var(--secondary-color);
-    background-color: var(--primar-color);
+    background-color: var(--primary-color);
     height: 85%;
     padding: 0 30px;
     border: none;
@@ -146,7 +146,7 @@ form{
 }
 
 .cDelete{
-    padding: 3px;
+    padding: 1px;
     background: none;
     border: none;
     display: flex;
@@ -160,6 +160,8 @@ form{
 .cDelete:hover svg{
     fill: #ff0033;
 }
+
+
 
 .cCheckbox{
     border: 2px solid var(--accent-color);
