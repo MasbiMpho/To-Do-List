@@ -34,7 +34,7 @@ body{
 }
 
 h1{
-    font-family:fantasy;
+    
     margin-top: 80px;
     margin-bottom: 70px;
     font-size: 3rem;
@@ -49,8 +49,7 @@ form{
 }
 
 .wrapper{
-    /* background-color: rgba(255, 255, 255, 0.4); 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    
     width: 800px;
     padding: 10px;
     max-width: 100%;
@@ -61,8 +60,6 @@ form{
 }
 
 .container {
-   /* background-color: rgba(255, 255, 255, 0.4);  /* White background with 80% opacity */
-    /*box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);   /* Soft shadow for depth */
     border-radius: 10px;
     width: 700px;
     max-width: 100%;
@@ -82,11 +79,26 @@ form{
     caret-color: var(--accent-color);
     font-weight: 500px;
 }
-#txtInputID:focus{
-    outline: none;
-    border-color: var(--accent-color);
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px 0 rgba(14, 230, 25, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba(14, 230, 25, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px 0 rgba(14, 230, 25, 0.8);
+    }
 }
 
+#txtInputID:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    animation: pulse 1.5s infinite;
+    background-color: rgba(0, 0, 0, 0.3); 
+    
+}
 
 #btnAddID{
     position: absolute;
@@ -94,7 +106,7 @@ form{
     right: 4px;
 
     color: var(--secondary-color);
-    background-color: var(--primary-color);
+    background-color: var(--primar-color);
     height: 85%;
     padding: 0 30px;
     border: none;
@@ -117,11 +129,11 @@ form{
     border-radius: 15px;
     display: flex;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* Adding card-like shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
     transition: transform 200ms ease;
 }
 .cTask:hover{
-    transform: scale(1.02); /* Slight hover effect for better interaction */
+    transform: scale(1.02); 
 }
 
 .cTask .cTaskText{
@@ -178,21 +190,76 @@ input[type="checkbox"]{
     display: none;
 }
 
-/*Responsiveness*/
-@media(max-width: 500px){
-    html{
-        font-size: 12pt;
+
+/* Responsiveness */
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 40px;
     }
-    #btnAddID{
+
+    .wrapper {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #txtInputID {
+        padding: 10px;
+    }
+
+    #btnAddID {
         position: unset;
         width: 100%;
         margin-top: 10px;
-        padding: 15px;
+        padding: 12px;
         height: auto;
-    }
-    h1{
-        margin-top: 50px;
-        font-size: 15vw;
     }
 }
 
+@media (max-width: 500px) {
+    html {
+        font-size: 12pt;
+    }
+
+    h1 {
+        font-size: 15vw;
+        margin-top: 30px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #txtInputID {
+        padding: 8px 15px;
+    }
+
+    #btnAddID {
+        position: unset;
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+    }
+
+    .cTask {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow-wrap: anywhere;
+    }
+
+    .cTask .cTaskText {
+        padding: 10px;
+        max-width: 90%;
+        overflow-wrap: anywhere;
+    }
+}

@@ -15,17 +15,17 @@ app.use(bodyParser.json());
 // Path to the JSON file for storing tasks
 const filePath = path.join(__dirname, 'tasks.json');
 
-// Function to read tasks from the JSON file
+// Function to read tasks
 const readTasks = () => {
   try {
     const data = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(data);
   } catch (err) {
-    return []; // Return an empty array if the file doesn't exist or is empty
+    return []; 
   }
 };
 
-// Function to save tasks to the JSON file
+// Function to save tasks
 const saveTasks = (tasks) => {
   try {
     fs.writeFileSync(filePath, JSON.stringify(tasks, null, 2));
@@ -70,7 +70,7 @@ app.delete('/api/tasks/:id', (req, res) => {
   res.json({ message: 'Task deleted' });
 });
 
-// Serve static files (HTML, CSS, JS) from the 'docs' folder
+
 app.use(express.static(path.join(__dirname, 'docs')));
 
 // Start the server

@@ -2,22 +2,22 @@ const Form = document.querySelector('form');
 const Input = document.getElementById('txtInputID');
 const List = document.getElementById('listID');
 
-let TaskArray = []; // Start with an empty array
+let TaskArray = []; 
 updateTaskList();
 
-// Fetch tasks from the server
+// Fetch tasks
 const fetchTasks = async () => {
   try {
     const response = await fetch('/api/tasks');
     const tasks = await response.json();
-    TaskArray = tasks; // Update TaskArray with tasks from the server
-    updateTaskList(); // Re-render the task list
+    TaskArray = tasks;
+    updateTaskList();
   } catch (error) {
     console.error("Error fetching tasks:", error);
   }
 };
 
-// Add event listener for form submission
+
 Form.addEventListener('submit', function(e){
     e.preventDefault();
     addTask();
@@ -43,9 +43,9 @@ async function addTask(){
             });
 
             const newTask = await response.json();
-            TaskArray.push(newTask); // Add the new task to the TaskArray
-            updateTaskList(); // Re-render the task list
-            Input.value = ""; // Clear input field
+            TaskArray.push(newTask);
+            updateTaskList(); 
+            Input.value = ""; 
         } catch (error) {
             console.error("Error adding task:", error);
         }
@@ -54,7 +54,7 @@ async function addTask(){
     }
 }
 
-// Update the task list displayed on the UI
+// Update the task
 function updateTaskList(){
     List.innerHTML = "";
 
@@ -85,7 +85,7 @@ function createTaskItem(task){
 
     const deleteButton = litask.querySelector(".cDelete");
     deleteButton.addEventListener("click", () => {
-        deleteTaskItem(task.id); // Delete task using task ID
+        deleteTaskItem(task.id); 
     });
 
     const checkbox = litask.querySelector("input");
@@ -96,7 +96,7 @@ function createTaskItem(task){
     return litask;
 }
 
-// Update the task completion status
+// Update the task
 async function updateTaskCompletionStatus(taskId, completed) {
     try {
         const response = await fetch(`/api/tasks/${taskId}`, {
@@ -108,28 +108,27 @@ async function updateTaskCompletionStatus(taskId, completed) {
         });
 
         const updatedTask = await response.json();
-        // Update the task in TaskArray
+       
         const taskIndex = TaskArray.findIndex(task => task.id === taskId);
         TaskArray[taskIndex] = updatedTask;
-        updateTaskList(); // Re-render the task list
+        updateTaskList(); 
     } catch (error) {
         console.error("Error updating task completion status:", error);
     }
 }
 
-// Delete a task from the list
+// Delete a task
 async function deleteTaskItem(taskId){
     try {
         await fetch(`/api/tasks/${taskId}`, {
             method: 'DELETE'
         });
 
-        TaskArray = TaskArray.filter(task => task.id !== taskId); // Remove the task from the array
-        updateTaskList(); // Re-render the task list
+        TaskArray = TaskArray.filter(task => task.id !== taskId);
+        updateTaskList(); 
     } catch (error) {
         console.error("Error deleting task:", error);
     }
 }
 
-// Initial fetch of tasks when the page loads
 fetchTasks();
