@@ -53,10 +53,10 @@ This app provides a simple and user-friendly interface to track daily activities
  
 <h2>Credits/References</h2>
 <ul>
-  <li>Deployment platform: Render</li>
+  <li>Deployment Platform: Render</li>
   <li>Deployed by: Mpho Masibigiri</li>
+   <li>Background Image provided by: https://stablediffusionweb.com/</li>
 </ul>
-
 
 <h2>Contact Me</h2>
 <ul>
