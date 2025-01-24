@@ -33,19 +33,19 @@ This app provides a simple and user-friendly interface to track daily activities
    
     Step 1: Open Git bash
     Step 2: Clone the repository using the following command: 
-            git clone https://github.com/Mpho-CapaCiTi/Mpho-CapaCiTi.github.io.git
+                git clone https://github.com/Mpho-CapaCiTi/Mpho-CapaCiTi.github.io.git
     Step 3: Navigate to the project directory using the following command: 
-            cd To-Do-List
+                cd To-Do-List
     Step 4: Install dependencies using the following command: 
-            npm install
+                npm install
     Step 5: Run the app locally using the following command: 
-            npm start
+                npm start
     Step 6: Open your browser and navigate to
-            http://localhost:5000
+                http://localhost:5000
 
 <h2>Usage</h2>
 
-  1. Open the app in your browser.
+  1. Open your browser and enter or click this url { https://mphos-webapp-todolist.onrender.com }.
   2. Use the input field to type in a new task and click Add to add it to your list.
   3. To mark a task as completed, click the green circle next to the task.
   4. To delete a task, click the trash icon next to the task.
