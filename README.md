@@ -29,7 +29,7 @@ This app provides a simple and user-friendly interface to track daily activities
   <li>Download and Install Git Bash</li>
 </ul>
 
-<h3>Steps to Install Project</h3>
+<h3>Steps to Install Project and Run Locally</h3>
    
     Step 1: Open Git bash
     Step 2: Clone the repository using the following command: 
