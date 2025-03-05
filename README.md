@@ -67,4 +67,3 @@ This app provides a simple and user-friendly interface to track daily activities
 
 <h2>Deployment Link:</h2>
 https://pro2dolist.onrender.com/
-https://mphos-webapp-todolist.onrender.com/
