@@ -65,5 +65,6 @@ This app provides a simple and user-friendly interface to track daily activities
   <li>Github: https://www.github.com/Mpho-CapaCiTi</li>
 </ul>
 
-<h2>Deployment Link:</h2> 
+<h2>Deployment Link:</h2>
+https://pro2dolist.onrender.com/
 https://mphos-webapp-todolist.onrender.com/
